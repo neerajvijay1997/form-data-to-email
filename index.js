@@ -6,7 +6,11 @@ require("dotenv").config();
 
 const { body, validationResult } = require("express-validator");
 
-const port = process.env.PORT;
+const port = 8000;
+
+var cors = require('cors')
+app.use(cors())
+
 
 app.use(express.urlencoded());
 
@@ -20,7 +24,7 @@ const mailGun = require("nodemailer-mailgun-transport");
 
 const auth = {
   auth: {
-    api_key: process.env.API_KEY, // TODO: Replace with your mailgun API KEY
+    api_key: process.env.API_KEY  , // TODO: Replace with your mailgun API KEY
     domain: process.env.DOMAIN, // TODO: Replace with your mailgun DOMAIN
   },
 };
