@@ -28,7 +28,7 @@ const auth = {
 const transporter = nodemailer.createTransport(mailGun(auth));
 
 app.use(expressLayouts);
-app.use(express.static("./assets"));
+//app.use(express.static("./assets"));
 
 // extract style and scripts from sub pages into the layout
 app.set("layout extractStyles", true);
